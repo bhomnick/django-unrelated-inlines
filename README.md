@@ -33,7 +33,7 @@ class CustomerInvoiceStackedInline(NonrelatedStackedInline):
         'amount'
     ]
 
-    def get_form_queryset(self, obj):
+    def get_form_queryset(self, request, obj):
         return self.model.objects.filter(email=obj.email)
 
     def save_new_instance(self, parent, instance):

@@ -30,7 +30,7 @@ class NonrelatedInlineMixin:
     checks_class = NonrelatedInlineModelAdminChecks
     formset = NonrelatedInlineFormSet
 
-    def get_form_queryset(self, obj):
+    def get_form_queryset(self, request, obj):
         raise NotImplementedError()
 
     def save_new_instance(self, parent, instance):
@@ -58,7 +58,7 @@ class NonrelatedInlineMixin:
 
         queryset = self.model.objects.none()
         if obj:
-            queryset = self.get_form_queryset(obj)
+            queryset = self.get_form_queryset(request, obj)
 
         defaults = {
             'form': self.form,
