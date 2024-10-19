@@ -4,5 +4,5 @@ flake8-isort==3.0.1
 isort==4.3.21
 pytest
 pytest-django
-tox
+tox<4
 tox-pyenv

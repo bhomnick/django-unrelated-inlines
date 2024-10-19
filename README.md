@@ -44,3 +44,9 @@ When viewing an `Customer` instance, we fetch a queryset of all `Invoice`
 instances sharing the same email address. Similarly, when saving a new `Invoice`
 instance we make sure to set its email attribute to the same value as its parent
 `Customer`.
+
+## Changelog
+
+| Date | Version | Changes |
+| --- | --- | --- |
+| October 1, 2024 | v0.3 | Removed support for Django 2.0, 2.1, 2.2.  Added support for Django 4.1, 4.2, 5.0, 5.1. |
